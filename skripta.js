@@ -61,7 +61,7 @@ function gameOver(gameWon) {
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == human ? "Pobeda!" : "Izgubila si Anita,gusko,od laptopa ....");
+	declareWinner(gameWon.player == human ? "Pobeda!" : "Izgubio/la si ! ....");
 }
 
 function declareWinner(who) {
@@ -83,7 +83,7 @@ function checkTie() {
 			cells[i].style.backgroundColor = "green";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner("umem i nereseno da igram!")
+		declareWinner("Nereseno!")
 		return true;
 	}
 	return false;
